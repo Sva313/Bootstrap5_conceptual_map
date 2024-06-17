@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="el" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Ψηφιακά μαθησιακά αντικείμενα. Εκπαιδευτικός Όμιλος Πουκαμισάς"
+    />
+    <meta
+      name="keywords"
+      content="ψηφιακά, μαθησιακά, αντικείμενα, Όμιλος, Πουκαμισάς"
+    />
+    <meta name="author" content="Εκδόσεις Πουκαμισάς" />
+
+    <!-- ΨΜΑ TODO: Ανανέωση τίτλου -->
+    <title>NETIQUETTE</title>
+
+    <!-- Facebook -->
+    <!-- meta property="og:title" content=""/>
+		<meta property="og:image" content=""/>
+		<meta property="og:url" content=""/>
+		<meta property="og:site_name" content=""/>
+		<meta property="og:description" content=""/ -->
+
+    <!-- Favicon -->
+    <!-- link rel="icon" type="image/png" sizes="48x48" href="./favicon_48x48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_32x32.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./apple-icon-114x114.png" -->
+
+    <!-- Fonts -->
+    <!-- link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./lib/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./lib/css/bootstrap-icons.min.css" />
+    <!-- link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" -->
+
+    <!-- Main style -->
+    <link rel="stylesheet" href="./app/css/style.css" />
+    <style>
+      @media print {
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+       /* Define table border */
+       table {
+          border: 1px solid black !important;
+          border-collapse: collapse;
+        }
+
+        /* Define table cell border */
+        td, th {
+          border: 1px solid black !important;
+          padding: 8px;
+        }
+    }
+    @-moz-document url-prefix() {
+      @media print {
+        /* Define table border */
+        table {
+          border: 2px solid black !important;
+          border-collapse: collapse;
+        }
+
+        /* Define table cell border */
+        td, th {
+          border: 2px solid black !important;
+          padding: 8px;
+        }
+      }
+    }
+
+    /* test on animations   */          
+   li {
+  -moz-animation-duration: 3s;
+  -webkit-animation-duration: 3s;
+  -moz-animation-name: slidein-left;
+  -webkit-animation-name: slidein-left;
+}
+
+@-moz-keyframes slidein-left {
+  from {
+    margin-left: 60%;
+    width: 300%
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes slidein-left {
+  from {
+    margin-left: 60%;
+    width: 300%
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+h2 {
+  -moz-animation-duration: 3s;
+  -webkit-animation-duration: 3s;
+  -moz-animation-name: slidein-right;
+  -webkit-animation-name: slidein-right;
+}
+
+@-moz-keyframes slidein-right {
+  from {
+    margin-right: 100%;
+    width: 300%
+  }
+  to {
+    margin-right: 0%;
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes slidein-right {
+  from {
+    margin-right: 100%;
+    width: 300%
+  }
+  to {
+    margin-right: 0%;
+    width: 100%;
+  }
+}
+    
+    
+    
+    </style>
+  </head>
+
+  <body>
+    <div id="outer_container" class="container-xl">
+      <header id="header" class="row p-2">
+        <div id="title" class="col-8 pt-2">
+          <!-- ΨΜΑ TODO: Ανανέωση τίτλου -->
+          <h1 class="fw-bold">NETIQUETTE</h1>
+        </div>
+
+        <div id="controls" class="col-4 pt-2">
+          <!-- Credits - Συντελεστές -->
+          <a
+            href="#"
+            class="ms-2 float-end btn-move-down"
+            role="button"
+            aria-label="Συντελεστές - Credits"
+            data-bs-toggle="modal"
+            data-bs-target="#creditsModal"
+          >
+            <i
+              class="bi bi-info-circle"
+              id="info_icon"
+              role="img"
+              aria-label="Συντελεστές - Credits"
+            ></i>
+          </a>
+
+          <!-- Προβολή Βοήθειας - Help Screen -->
+          <a
+            href="#"
+            class="float-end btn-move-down"
+            role="button"
+            aria-label="Προβολή Βοήθειας - Help Screen"
+            data-bs-toggle="modal"
+            data-bs-target="#helpModal"
+          >
+            <i
+              class="bi bi-question-circle"
+              id="help_icon"
+              role="img"
+              aria-label="Προβολή Βοήθειας - Help Screen"
+            ></i>
+          </a>
+        </div>
+      </header>
+
+      <main id="main" class="row">
+        <div id="canvas_container" class="col w-100">
+          <div id="inner_container" class="row">
+            <div id="container_wrapper" class="col" tabindex="0" style="">
+              <!-- NOTE: style here is for editting-->
+
+              <!-- ΨΜΑ TODO: Ανανέωση κειμένου 
+
+							ΓΙΑ MANUALLY ΕΙΣΑΓΩΓΗ ΕΙΚΟΝΩΝ (ΠΡΟΑΙΡΕΤΙΚΑ)
+							Στο κείμενο μπορεί να βάλουμε και εικόνα/ες "χειροκίνητα" ως εξής:
+							i) Αρχικά τοποθετούμε τις εικόνες μας (πχ. με copy - paste) μέσα στο folder "resources" (που βρίσκεται μέσα στο φάκελο του ΨΜΑ μας)
+							ii) Μετά στο κείμενο (html) (και στο σημείο) που θέλουμε, πρέπει να προσθέσουμε μια γραμμή όπως φαίνεται εδ΄ώ:
+							
+									<img src="resources/MY_IMAGE_NAME.jpg" />
+
+							(Προσοχή: όπου MY_IMAGE_NAME.jpg  βάζουμε το όνομα της δικής μας εικόνας. Το όνομα πρέπει να είναι χωρίς κενά και ελληνικούς χαρακτήρες).  
+							
+							Αν θέλουμε να δώσουμε ένα μέγεθος στην εικόνα μας, θα πρέπει να προσθέσουμε μια γραμμή όπως φαίνεται παρακάτω [έχει μπει το style="width:80%" ή όσο θέλουμε. Προτιμάμε ποσοστά για να προσαρμόζεται σε όλα τα μεγέθη (πχ. 50% => σημαίνει 50% του πλάτους του ΨΜΑ)]
+							
+									<img src="resources/MY_IMAGE_NAME.jpg" style="width:80%" />
+
+							Η εικόνα αυτόματα θα είναι align αριστερά 
+
+							ΨΜΑ TODO: Αντικαταστήστε το παρακάτω κείμενο -->
+
+              <div class="container py-5">
+                <div class="accordion" id="mainAccordion">
+                  <!-- Primary accordion item 1 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button
+                      style="background-color: rgb(12, 43, 145); color: white;"
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="false"
+                      aria-controls="collapseOne"
+                      
+                      >
+                      Κώδικας δεοντολογικής συμπεριφοράς στο Διαδίκτυο
+
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingOne"
+                      
+                    >
+                      <div class="accordion-body">
+                        <div class="accordion" id="nestedAccordion1">
+                          <!-- Nested accordion item 1-1 -->
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="nestedHeading1-1">
+                              <button
+                              style="background-color: rgb(0, 106, 255); color: white;"
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#nestedCollapse1-1"
+                                aria-expanded="false"
+                                aria-controls="nestedCollapse1-1"
+                              >
+                              1.1 Ορισμός 
+                              </button>
+                            </h2>
+                            <div
+                              id="nestedCollapse1-1"
+                              class="accordion-collapse collapse"
+                              aria-labelledby="nestedHeading1-1"
+                              ="#nestedAccordion1"
+                            >
+                              <div  class="accordion-body text-center" style="background-color: rgb(0, 106, 255);">
+                                <table class="table">
+                                  <thead>
+                                    <tr >
+                                      <th tabindex="0" style="display: none;">Ορισμός</th>
+                                      <th tabindex="0" style="display: none;">insivible</th>
+                                      
+                                    </tr>
+                                  </thead>
+                                  <tbody style="background-color: 	rgb(54, 69, 79);" >
+                                   
+                                   
+                                    <tr>
+                                      <td >
+                                        <input type="text" class="form-control" placeholder="Πληκτρολογήστε"  >
+                                      </td>
+                                      
+                                      
+                                    </tr>
+                                    
+                                    <tr>
+                                      <td tabindex="0">
+                                        Σύνολο των κανόνων που ορίζουν την αποδεκτή συμπεριφορά μεταξύ
+                                        δύο ή περισσότερων χρηστών του διαδικτύου κατά την ηλεκτρονική τους επικοινωνία
+                                      </td>
+                                      
+                                    </tr>
+                                       
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Nested accordion item 1-2 -->
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="nestedHeading1-2">
+                              <button
+                              style="background-color: rgb(24, 81, 0);
+                              color: white;"
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#nestedCollapse1-2"
+                                aria-expanded="false"
+                                aria-controls="nestedCollapse1-2"
+                              >
+                                1.2 Σημασία
+                              </button>
+                            </h2>
+                            <div
+                              id="nestedCollapse1-2"
+                              class="accordion-collapse collapse"
+                              aria-labelledby="nestedHeading1-2"
+                              ="#nestedAccordion1"
+                            >
+                            <ul style="text-align: center; " class="list-group">
+                              
+                              <li tabindex="0" class="list-group-item">Ευγένεια και σεβασμός</li> <li tabindex="0" class="list-group-item">Προστασία της ιδιωτικότητας</li>
+                              <li tabindex="0" class="list-group-item"><input type="text" class="form-control" placeholder="Πληκτρολογήστε"></li>
+                              <li tabindex="0" class="list-group-item">Αποφυγή αναστάτωσης και αντιδράσεων</li>
+                              <li tabindex="0" class="list-group-item">Ενθάρρυνση της συνεργασίας και της ανταλλαγής ιδεών</li>
+                              <li tabindex="0" class="list-group-item"><input type="text" class="form-control" placeholder="Πληκτρολογήστε"></li>
+                              
+                            </ul>
+                            </div>
+                          </div>
+                          <!-- Nested accordion item 1-3 -->
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="nestedHeading1-3">
+                              <button
+                                style="background-color:  rgb(0, 56, 104); color: white;"
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#nestedCollapse1-3"
+                                aria-expanded="false"
+                                aria-controls="nestedCollapse1-3"
+                              >
+                                1.3 Βασικοί Κανόνες
+                              </button>
+                            </h2>
+                            <div
+                              id="nestedCollapse1-3"
+                              class="accordion-collapse collapse"
+                              aria-labelledby="nestedHeading1-3"
+                              ="#nestedAccordion1"
+                            >
+                              <div class="accordion-body">
+                                <ul style="text-align: center; " class="list-group">
+                                  <li tabindex="0" class="list-group-item">Σεβαστείτε το απόρρητο των άλλων χρηστών</li> 
+                                  <li tabindex="0" class="list-group-item"><input type="text" class="form-control" placeholder="Πληκτρολογήστε"></li>
+                                  <li tabindex="0" class="list-group-item">Επαληθεύστε τα γεγονότα πριν κοινοποιήσετε</li>
+                                  <li tabindex="0" class="list-group-item"><input type="text" class="form-control" placeholder="Πληκτρολογήστε"></li>
+                                  <li tabindex="0" class="list-group-item">Ελέγξτε τα μηνύματα και απαντήστε</li>
+                                  <li tabindex="0" class="list-group-item">Μην δημοσιεύετε ιδιωτικές ή προσβλητικές εικόνες ή σχόλια</li>
+                                  <li tabindex="0" class="list-group-item"><input type="text" class="form-control" placeholder="Πληκτρολογήστε"></li>
+                                  <li tabindex="0" class="list-group-item">Μην αποκλείεται τους χρήστες ή μιλάτε πίσω από την πλάτη τους</li>
+                                  <li tabindex="0" class="list-group-item">Μην κοινοποιείτε ειδήσεις που δεν είστε σίγουροι ότι είναι αληθείς
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Nested accordion item 1-4 -->
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="nestedHeading1-4">
+                              <button
+                                style="background-color: rgb(104, 62, 0); color: white;"
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#nestedCollapse1-4"
+                                aria-expanded="false"
+                                aria-controls="nestedCollapse1-4"
+                              >
+                               1.4 Παραδείγματα καλής χρήσης
+                              </button>
+                            </h2>
+                            <div
+                              id="nestedCollapse1-4"
+                              class="accordion-collapse collapse"
+                              aria-labelledby="nestedHeading1-4"
+                              ="#nestedAccordion1"
+                            >
+                              <div class="accordion-body">
+                                <div style="background-color: rgb(104, 62, 0); color: white;" class="container">
+                                
+                                <div class="accordion-body">
+                                  <ul style="text-align: center; " class="list-group">
+                                    <li tabindex="0" class="list-group-item">Αποφυγή κεφαλαίων γραμμάτων</li> 
+                                    <li tabindex="0" class="list-group-item"><input type="text" class="form-control" placeholder="Πληκτρολογήστε"></li>
+                                    <li tabindex="0" class="list-group-item">Σεβασμός των πνευματικών δικαιωμάτων</li> 
+                                  </div></ul>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <!-- Nested accordion item 1-5 -->
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="nestedHeading1-5">
+                              <button
+                              style="background-color:rgb(194, 0, 0);
+                              color: white;"
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#nestedCollapse1-5"
+                                aria-expanded="false"
+                                aria-controls="nestedCollapse1-5"
+                              >
+                             1.5 Συνέπειες κακής χρήσης
+                              </button>
+                            </h2>
+                            <div
+                              id="nestedCollapse1-5"
+                              class="accordion-collapse collapse"
+                              aria-labelledby="nestedHeading1-5"
+                              ="#nestedAccordion1"
+                            >
+                              <div class="accordion-body">
+                                <div class="accordion-body">
+                                  <ul style="text-align: center; " class="list-group">
+                                    <li tabindex="0" class="list-group-item">Δημιουργία αρνητικής ατμόσφαιρας</li> 
+                                    <li tabindex="0" class="list-group-item"><input type="text" class="form-control" placeholder="Πληκτρολογήστε"></li>
+                                    <li tabindex="0" class="list-group-item">Απώλεια εμπιστοσύνης και σεβασμού</li> 
+                                    <li tabindex="0" class="list-group-item">Αποδυνάμωση της κοινότητας</li>
+                                  </div></ul>
+                                
+                              </div>
+                              
+                          
+                            </div>
+
+                           
+
+
+                          </div>
+
+
+
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="nestedHeading1-6">
+                              <button
+                                style="background-color:purple; color:white;"
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#nestedCollapse1-6"
+                                aria-expanded="false"
+                                aria-controls="nestedCollapse1-6"
+                              >
+                               1.6 Συμβουλές για την τήρηση
+                              </button>
+                            </h2>
+                            <div
+                              id="nestedCollapse1-6"
+                              class="accordion-collapse collapse"
+                              aria-labelledby="nestedHeading1-6"
+                              ="#nestedAccordion1"
+                            >
+                              <div class="accordion-body">
+                                <div style="background-color:purple; color: white;" class="container">
+                                
+                                <div class="accordion-body">
+                                  <ul style="text-align: center; " class="list-group">
+                                    <li tabindex="0" class="list-group-item">Σκέψου πριν δημοσιεύσεις</li> 
+                                    <li tabindex="0" class="list-group-item"><input type="text" class="form-control" placeholder="Πληκτρολογήστε"></li>
+                                    <li tabindex="0" class="list-group-item">Αντίδραση με ευγένεια σε αντίξοες καταστάσεις</li> 
+                                    <li tabindex="0" class="list-group-item">Συμμόρφωση με τους κανόνες του κάθε φόρουμ/διαδικτυακού τόπου</li> 
+                                    <li tabindex="0" class="list-group-item">Βοήθησε τους άλλους χρήστες</li> 
+                                    <li tabindex="0" class="list-group-item"><input type="text" class="form-control" placeholder="Πληκτρολογήστε"></li>
+
+                                  </div></ul>
+                                  
+                              </div>
+                            </div>
+                          </div>
+
+
+                        </div>
+                       
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div></br>
+              <div class="text-center">
+                <button class="btn btn-success" id="saveButton" style="background-color: rgb(12, 43, 145);">
+                  Αποθήκευση σε Αρχείο
+                </button>
+              </div>
+              <br />
+              <br />
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- ΨΜΑ Help Screen (popup) -->
+      <div class="modal fade" id="helpModal" tabindex="-1" aria-hidden="true">
+        <div
+          class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-6" id="helpModalLabel">
+                Οθόνη Βοήθειας
+              </h1>
+              <button
+                type="button"
+                class="btn-close btn-move-down"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <!-- ΨΜΑ TODO: Προσθήκη - αντικατάσταση κειμένου (ή HTML) με πληροφορίες, οδηγίες ή βοήθεια -->
+              <h2 class="fw-bold">Εισαγωγικό σημείωμα</h2>
+              <p class="text-just">
+                Εννοιολογικός Χάρτης για Netiquette.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary btn-sm px-3 py-2 btn-move-down"
+                data-bs-dismiss="modal"
+              >
+                Κλείσιμο
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ΨΜΑ Credits (popup) -->
+      <div
+        class="modal fade"
+        id="creditsModal"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="creditsModalLabel">
+                Καρτέλα Συντελεστών
+              </h1>
+              <button
+                type="button"
+                class="btn-close btn-move-down"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body" id="creditsModalBody">
+              <!-- Credits Here -->
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary btn-sm px-3 py-2 btn-move-down"
+                data-bs-dismiss="modal"
+              >
+                Κλείσιμο
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END OF: id="outer_container" -->
+
+    <script>
+      let credits = []; // DO NOT DELETE OR MODIFY THIS LINE
+
+      credits = [
+        [
+          `ΚΑΝΟΝΕΣ NETIQUETTE`, // Τίτλος
+        ],
+        [
+          `1.0`, // Έκδοση
+        ],
+        [
+          `17.06.2024`, // Ημερομηνία Δημιουργίας
+        ],
+        [
+          `-`, // Συντελεστές - Δημιουργία & Παιδαγωγική Σχεδίαση
+          `Δημήτρης Σβάρνας`, // Συντελεστές - Τεχνική Σχεδίαση & Ανάπτυξη
+        ],
+        [
+          `logo.jpg`, // Λογότυπο Έργου & Λογότυπο Πλαισίου Χρηματοδότησης
+        ],
+      ];
+
+      // END OF: credits
+    </script>
+
+    <!-- Add blocking scripts here at the end of body -->
+    <!-- jQuery -->
+    <script src="./lib/js/jquery-3.7.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="./lib/js/bootstrap.bundle.min.js"></script>
+
+    <!-- printThis.js  -->
+	  <script src="./lib/js/printThis.js"></script>
+	  <!-- printButton-function.js  -->
+	  <script src="./lib/js/printButton-function.js"></script>
+
+    <!-- Main -->
+    <!-- script src="./app/js/index.js"></script -->
+
+    <script>
+      // ----------- DO NOT DELETE THE FOLLOWING CODE --------------
+
+      // -------------- Credits -------------
+      $("#info_icon")
+        .parent()
+        .on("click", function () {
+          let credits_data = credits;
+          let credits_html = "";
+
+          credits_title = $.trim(credits_data[0][0]);
+          credits_version = $.trim(credits_data[1][0]);
+          credits_date = $.trim(credits_data[2][0]);
+          credits_role_1 = $.trim(credits_data[3][0]);
+          credits_role_2 = $.trim(credits_data[3][1]);
+          credits_role_3 = $.trim(credits_data[3][2]);
+          credits_role_4 = $.trim(credits_data[3][3]);
+          credits_logo = $.trim(credits_data[4][0]);
+
+          credits_html += `<div>
+            <p><b>Τίτλος:</b> ${credits_title}</p>
+            <p><b>Έκδοση:</b> ${credits_version}</p>
+            <p><b>Ημερομηνία Δημιουργίας:</b> ${credits_date}</p>
+            <p><b>Συντελεστές</b></p>
+            <ul style="list-style-type: none;">
+              <li><p><b>Δημιουργία - Παιδαγωγική Σχεδίαση:</b> ${credits_role_1}</p></li>
+              <li><p><b>Τεχνική Σχεδίαση - Ανάπτυξη:</b> ${credits_role_2}</p></li>
+            </ul>
+            <img src="app/images/${credits_logo}" alt="Λογότυπο Έργου και Πλαισίου Χρηματοδότησης" style="width: 100%"/>
+          </div>`;
+
+          $("#creditsModalBody").empty().html(credits_html);
+        });
+
+      // -------------- Dimensions and font size -------------
+
+      let resolutionA = 16;
+      let resoutionB = 9;
+      let fontSize = 1;
+      // let global_scale = 1;
+
+      // $("#outer_container").css({ maxWidth: 1280 + "px" });
+
+      $("#inner_container a").attr("target", "_blank");
+
+      $(window).resize(function () {
+        // Adjust canvas container dimensions (especially height) on window resize
+
+        // Window Dimensions
+        let windowWidth = $(window).width();
+        let windowHeight = $(window).height() - $("#header").outerHeight(); // - 2;
+
+        // Adjust width
+        let maxWidth = 1280;
+        let width = $("#main").width();
+
+        if (width < maxWidth) {
+          $("#outer_container").css({ width: "96%" });
+          width = $("#main").width();
+        }
+
+        // Adjust resolution (landscape OR portrait)
+        if (windowWidth > windowHeight) {
+          resolutionA = 16;
+          resolutionB = 9;
+        } else if (windowWidth < windowHeight) {
+          resolutionA = 9;
+          resolutionB = 16;
+        }
+
+        // Adjust height
+        let height =
+          (width * resolutionB) / resolutionA - $("#header").outerHeight() + 60;
+
+        let maxheight = Math.min(windowHeight, maxWidth);
+        if (height > maxheight) {
+          height = maxheight;
+          width = (height * resolutionA) / resolutionB;
+          $("#outer_container").css({ width: width + "px" });
+        }
+
+        // $("#canvas_container").css({ height: height + "px" });
+
+        let tHeight = height - $("#inner_container").position().top + 20;
+        $("#inner_container").css({ height: tHeight + "px" });
+
+        let vHeight = height - $("#canvas_container").position().top + 30;
+        $("#canvas_container").css({ height: vHeight + "px" });
+
+        // $('#title').html(width + ', ' + height)
+
+        // Adjust font size (dynamically set size based on screen size)
+        fontSize = 0.018 * Math.min(windowWidth, windowHeight) + 6;
+        $("*")
+          .not("video, audio, track")
+          .css({
+            fontSize: fontSize + "px",
+            lineHeight: fontSize * 1.3 + "px",
+          });
+        $("h1, h2").css({ fontSize: fontSize * 1.1 + "px" });
+        $("h3, h4").css({ fontSize: fontSize + "px" });
+        $("h5, h6, p, i, a, b, ol, ul, li").css({
+          fontSize: fontSize * 0.9 + "px",
+        });
+        $(".bi").css({ fontSize: fontSize * 1.8 + "px" });
+
+        /*
+        // Adjust icons' size on window resize
+        let global_scale = Math.max(width / maxWidth, 0.72);
+        $(".icons").css({
+          width: 38 * global_scale + "px",
+          height: 38 * global_scale + "px",
+        });
+        */
+      });
+
+      $(window).resize();
+
+      $(document).ready(function () {
+        $('.form-control').attr('aria-label','Πληκτρολογήστε')
+        $(window).resize();
+      });
+    </script>
+  </body>
+</html>
